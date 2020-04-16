@@ -26,7 +26,7 @@
 }
 
 .ex-4-square {
-    transition: 2s;
+    transition: opacity 2s;
     cursor: pointer;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .ex-5-square {
-    transition: 2s;
+    transition: transform 2s;
     cursor: pointer;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .ex-7-img {
-    transition: 2s;
+    transition: filter 2s;
 }
 
 .ex-7-img:hover {
@@ -60,7 +60,7 @@
 }
 
 .ex-8-img {
-    transition: 2s;
+    transition: all 2s;
 }
 
 .ex-8-img:hover {
@@ -73,17 +73,25 @@
 }
 
 .ex-9-img:hover {
-    filter: blur(20px) grayscale(20%);
-    border-radius: 30px;
+    filter: grayscale(.6) sepia(.5);
+    border-radius: 20px;
     transform: scale(1.5);
 }
 
 .ex-10-icon {
-    animation: spin 1s linear infinite;
+    animation: ruota 1s linear infinite;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(1turn);
-    }
+@keyframes ruota {
+    from{transform: rotate(0);}
+    to{transform: rotate(-360deg);}
+}
+
+.ex-11-icon:hover {
+    animation: gira-orario 2s linear;
+}
+@keyframes gira-orario {
+    0% {transform: rotate(0);}
+    90% {transform: rotate(300deg);}
+    100% {transform: rotate(0);}
 }
